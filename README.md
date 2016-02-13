@@ -29,8 +29,8 @@ gulp.task('stack', function() {
     return gulp.src(['location/to/[name-of-stack-file].json'])
         .pipe(cloudformation.init({   //Only validates the stack files
             region: 'us-east-1',
-            accessKeyId: "YOUR AWS ACCESS KEY ID",
-            secretAccessKey": "YOUR AWS SECRET ACCESS KEY"
+            accessKeyId: 'YOUR AWS ACCESS KEY ID',
+            secretAccessKey: 'YOUR AWS SECRET ACCESS KEY'
         })
         .pipe(cloudformation.deploy({ //deploy stack files
             Capabilities: [ 'CAPABILITY_IAM' ] //needed if deploying IAM Roles
@@ -51,7 +51,7 @@ gulp-cloudformation is dependent upon
 - [bugcore](https://github.com/airbug/bugcore) (0.3.26)
 - [gulp-util](https://github.com/gulpjs/gulp-util) (3.0.7)
 - [rx-lite](https://github.com/Reactive-Extensions/RxJS) (4.0.7)
-- [through2](https://github.com/rvagg/through2 (2.0.1)
+- [through2](https://github.com/rvagg/through2) (2.0.1)
 
 
 ## Download Source

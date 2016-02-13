@@ -143,10 +143,10 @@ const GulpCloudformation = Class.extend(Obj, {
 
     /**
      * @private
-     * @param StackName
-     * @param TemplateBody
+     * @param {string} StackName
+     * @param {string} TemplateBody
      * @param params
-     * @returns {*|Observable}
+     * @returns {Observable}
      */
     doDeploy(StackName, TemplateBody, params) {
         return this.upsertStack({
