@@ -30,6 +30,7 @@ gulp.task('stack', () => {
     })
     .pipe(cloudformation.deploy({ //deploy stack files
       Capabilities: [ 'CAPABILITY_IAM' ] //needed if deploying IAM Roles
+      StackName: 'SomeStack' // Optional: defaults to the name of the stack file
     }))
     .on('error', (error) => {
       util.log('Stream Exiting With Error', error)

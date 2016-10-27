@@ -94,7 +94,7 @@ export default class GulpCloudformation {
 
       const {path, contents} = file
       const ext = extname(path)
-      const StackName = basename(path, ext)
+      const StackName = params.StackName || basename(path, ext)
       const TemplateBody = contents.toString(enc)
 
       let acc
