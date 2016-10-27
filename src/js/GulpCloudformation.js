@@ -165,7 +165,7 @@ const GulpCloudformation = Class.extend(Obj, {
         .map(({OutputKey, OutputValue}) => {
             return {[OutputKey]: OutputValue};
         })
-        .scan(Object.assign, {});
+        .scan((acc, value) => Object.assign(acc, value), {});
     },
 
     hasStack(params) {
