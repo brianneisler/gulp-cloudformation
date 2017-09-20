@@ -27,7 +27,7 @@ gulp.task('stack', () => {
       region: 'us-east-1',
       accessKeyId: 'YOUR AWS ACCESS KEY ID',
       secretAccessKey: 'YOUR AWS SECRET ACCESS KEY'
-    })
+    }))
     .pipe(cloudformation.deploy({ //deploy stack files
       Capabilities: [ 'CAPABILITY_IAM' ] //needed if deploying IAM Roles
       StackName: 'SomeStack' // Optional: defaults to the name of the stack file
